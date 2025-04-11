@@ -1,3 +1,4 @@
+"use client";
 import background_image from "../images/background_image.jpg";
 import javascript from "../images/javascript.png";
 import react from "../images/react.png";
@@ -11,8 +12,19 @@ import azure from "../images/azure.png";
 import next from "../images/next.png";
 import typescript from "../images/typescript.png";
 import springboot from "../images/springboot.png";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [isVisable, setIsVisable] = useState(false);
+  const [isIntersecting, setIntersecting] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisable(true);
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="relative">
       <div className="relative h-[1300px] w-full overflow-hidden">
@@ -23,13 +35,17 @@ export default function Header() {
         />
         <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-[#1d1d1d] z-0" />
 
-        <div className="relative z-10 px-10 pt-40">
-          <h1 className="font-extrabold text-6xl">Nicholas Norsek</h1>
-          <p className="mt-6 text-xl font-medium max-w-3xl ">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem Sed
-            ut perspiciatis unde omnis iste natus error sit voluptatem Sed ut
-            perspiciatis unde omnis iste natus error sit voluptatem Sed ut
-            perspiciatis unde omnis iste natus error sit voluptatem
+        <div className="relative z-10 px-10 pt-40 justify-items-center">
+          <h1
+            className={` font-extrabold text-6xl transition-opacity duration-1000 ${
+              isVisable ? "opacity-100 animate-slide-in-top" : "opacity-0"
+            }`}
+          >
+            Hello, I'm Nicholas Norsek.
+          </h1>
+          <p className="animate-slide-in-top mt-50 text-4xl font-medium max-w-3xl text-center">
+            "I'm a software developer focusing on creative, efficient, and
+            reliable websites."
           </p>
 
           <div className="mt-50 flex flex-wrap w-200 gap-x-10 gap-y-7 mx-auto pt-10">
