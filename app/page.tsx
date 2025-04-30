@@ -1,11 +1,11 @@
-import Image from "./images/image_website_template.png";
+import Image from "../public/images/image_website_template.png";
 import Button from "./components/button";
-import Header from "./pages/header";
+import Title from "./pages/title";
 export default function Home() {
   return (
     <main>
       <div>
-        <Header />
+        <Title />
         <div className="p-10">
           <div className="mt-40 flex items-start gap-4">
             <div className="h-130 w-340 shadow-2xl hover:cursor-pointer bg-blue-800">
@@ -36,7 +36,7 @@ export default function Home() {
                 className="w-140 pl-5 py-15"
               />
             </div>
-            <div className="-mr-250 ml-70 flex flex-col w-full h-full relative">
+            <div className="-mr-250 ml-70 flex flex-col w-full h-full relativ">
               <h2 className="font-bold text-6xl pb-2">Lorem ipsum</h2>
               <p className="mt-1.5 w-70 h-70 font-bold text-2xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
