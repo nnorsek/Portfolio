@@ -1,13 +1,26 @@
+"use client";
 import Image from "../public/images/image_website_template.png";
 import Button from "./components/button";
 import Title from "./pages/title";
+import Header from "./pages/header";
+import { useIsVisible } from "./functions/useIsVisible";
+import { useRef } from "react";
 export default function Home() {
+  const ref1 = useRef<HTMLDivElement>(null);
+  const ref2 = useRef<HTMLDivElement>(null);
+  const isVisible1 = useIsVisible(ref1);
+  const isVisible2 = useIsVisible(ref2);
   return (
     <main>
       <div>
         <Title />
         <div className="p-10">
-          <div className="mt-40 flex items-start gap-4">
+          <div
+            ref={ref2}
+            className={`mt-40 flex items-start gap-4 transition-opacity ease-in duration-700 ${
+              isVisible2 ? "opacity-100 animate-slide-in-left " : "opacity-0"
+            } `}
+          >
             <div className="h-130 w-340 shadow-2xl hover:cursor-pointer bg-blue-800">
               <img
                 src={Image.src}
@@ -28,8 +41,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row-reverse mt-70 items-start gap-4">
-            <div className="h-130 w-200 shadow-2xl hover:cursor-pointer bg-blue-800 relative">
+          <div
+            ref={ref1}
+            className={`flex flex-row-reverse mt-70 items-start gap-4 transition-opacity ease-in duration-700 ${
+              isVisible1 ? "opacity-100 animate-slide-in-right" : "opacity-0"
+            }`}
+          >
+            <div
+              className={` 130 w-200 shadow-2xl hover:cursor-pointer bg-blue-800 relative`}
+            >
               <img
                 src={Image.src}
                 alt="website-template"
