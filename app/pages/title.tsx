@@ -25,11 +25,12 @@ export default function Title() {
           <h1 className="font-extrabold mx-auto text-8xl tracking-tight pb-5">
             Nicholas Norsek
           </h1>
-          <p className="py-10">
+          <p className="py-10 text-xl">
             <Typewriter
               words={[
                 "SOFTWARE DEVELOPER",
                 "FRONTEND DEVELOPER",
+                "BACKEND DEVELOPER",
                 "WEB ENGINEER",
               ]}
             />
@@ -44,7 +45,7 @@ export default function Title() {
           </ButtonRound>
         </div>
         <div className="mt-50 ml-50">
-          <h1 className="text-6xl ml-50 italic">Technology I Use..</h1>
+          <h1 className="text-6xl ml-50 italic">Technologies I Use..</h1>
           <div className="mt-10 flex flex-wrap w-200 gap-x-10 gap-y-7 pt-10">
             {[
               { src: html.src, label: "HTML" },

@@ -44,9 +44,12 @@ const Typewriter: React.FC<TypewriterProps> = ({
   }, [text, isDeleting, wordIndex, words, typingSpeed, pauseTime]);
 
   return (
-    <span className="inline-flex items-baseline gap-[3.9px]">
-      <span className="text-emerald-500 font-bold">{text}</span>
-      <span className="w-[2px] h-[1em] bg-emerald-500 animate-blink" />
+    <span className="inline-flex items-baseline gap-[3.9px] relative">
+      <span className="invisible absolute pointer-events-none">
+        {words.reduce((a, b) => (a.length > b.length ? a : b))}
+      </span>
+      <span className="text-emerald-500 font-bold relative z-10">{text}</span>
+      <span className="w-[2px] h-[0.8em] font-bold bg-white animate-blink relative z-10" />
     </span>
   );
 };
