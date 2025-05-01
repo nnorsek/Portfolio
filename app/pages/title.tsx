@@ -1,3 +1,5 @@
+"use client";
+
 import javascript from "../../public/images/javascript.png";
 import react from "../../public/images/react.png";
 import git from "../../public/images/git.png";
@@ -12,8 +14,9 @@ import typescript from "../../public/images/typescript.png";
 import springboot from "../../public/images/springboot.png";
 import { FaArrowDown } from "react-icons/fa6";
 import ButtonRound from "../components/buttonRound";
+import Typewriter from "../components/Typewriter";
 
-export default function Header() {
+export default function Title() {
   return (
     <div className="">
       <div className="pt-60">
@@ -22,8 +25,14 @@ export default function Header() {
           <h1 className="font-extrabold mx-auto text-8xl tracking-tight pb-5">
             Nicholas Norsek
           </h1>
-          <p className="text-xl font-bold text-emerald-500 py-10">
-            SOFTWARE DEVELOPER
+          <p className="py-10">
+            <Typewriter
+              words={[
+                "SOFTWARE DEVELOPER",
+                "FRONTEND DEVELOPER",
+                "WEB ENGINEER",
+              ]}
+            />
           </p>
           <p className="text-xl text-wrap w-100 text-white pb-20">
             I'm a full stack software developer, focusing on building creative
@@ -34,11 +43,9 @@ export default function Header() {
             <FaArrowDown className="inline ml-1 mb-1 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
           </ButtonRound>
         </div>
-        <div className="mt-50">
-          <h1 className="text-6xl justify-self-center italic">
-            Technology Stack
-          </h1>
-          <div className="mt-10 flex flex-wrap w-200 gap-x-10 gap-y-7 mx-auto pt-10">
+        <div className="mt-50 ml-50">
+          <h1 className="text-6xl ml-50 italic">Technology I Use..</h1>
+          <div className="mt-10 flex flex-wrap w-200 gap-x-10 gap-y-7 pt-10">
             {[
               { src: html.src, label: "HTML" },
               { src: css.src, label: "CSS" },
