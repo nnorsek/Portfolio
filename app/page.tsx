@@ -35,10 +35,7 @@ export default function Home() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam
               </p>
-              <div className="flex flex-row gap-x-5">
-                <Button text={"See Code"} />
-                <Button text={"Visit Demo"} />
-              </div>
+              <div className="flex flex-row gap-x-5"></div>
             </div>
           </div>
           <div
@@ -63,10 +60,7 @@ export default function Home() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam
               </p>
-              <div className="flex flex-row gap-x-5">
-                <Button text={"See Code"} />
-                <Button text={"Visit Demo"} />
-              </div>
+              <div className="flex flex-row gap-x-5"></div>
             </div>
           </div>
           <div className="mt-70 flex items-start gap-4">
@@ -84,10 +78,7 @@ export default function Home() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam
               </p>
-              <div className="flex flex-row gap-x-5">
-                <Button text={"See Code"} />
-                <Button text={"Visit Demo"} />
-              </div>
+              <div className="flex flex-row gap-x-5"></div>
             </div>
           </div>
         </div>
