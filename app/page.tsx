@@ -1,8 +1,6 @@
 "use client";
 import Image from "../public/images/image_website_template.png";
-import Button from "./components/button";
 import Title from "./pages/title";
-import Header from "./pages/header";
 import { useIsVisible } from "./functions/useIsVisible";
 import { useRef } from "react";
 export default function Home() {
