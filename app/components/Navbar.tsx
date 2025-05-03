@@ -33,18 +33,18 @@ const Navbar = () => {
       <div className="px-4 float-right mr-60">
         <ul className="flex space-x-14 py-4">
           <li>
-            <Link href="/" className={linkClasses("/")}>
+            <Link href="#homeSection" className={linkClasses("/")}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/projects" className={linkClasses("/projects")}>
+            <Link href="#projectSection" className={linkClasses("/projects")}>
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/title" className={linkClasses("/title")}>
-              Title
+            <Link href="#aboutSection" className={linkClasses("/title")}>
+              About
             </Link>
           </li>
         </ul>
