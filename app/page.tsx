@@ -1,9 +1,9 @@
 "use client";
 
 import Title from "./pages/title";
-import ProjectCard from "./components/projectCard";
+import ProjectCard from "./components/ProjectCard";
 
-export default function Home() {
+export default function App() {
   return (
     <main>
       <Title />
