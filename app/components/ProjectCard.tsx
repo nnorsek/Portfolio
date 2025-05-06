@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { useIsVisible } from "../functions/useIsVisible";
 import imgSrc from "../../public/images/image_website_template.png";
+import ButtonRound from "./buttonRound";
 
 interface ProjectCardProps {
   reverse?: boolean;
@@ -22,20 +23,37 @@ export default function ProjectCard({
   return (
     <div
       ref={ref}
-      className={`mt-40 flex items-start gap-4 transition-opacity ease-in duration-700 ${
-        isVisible ? "opacity-100 animate-slide-in-left" : "opacity-0"
-      } ${reverse ? "flex-row-reverse" : ""}`}
+      className={`py-10 flex flex-col md:flex-row items-center md:items-start gap-10 transition-opacity ease-in duration-700 ${
+        isVisible
+          ? `opacity-100 ${
+              reverse ? "animate-slide-in-right" : "animate-slide-in-left"
+            }`
+          : "opacity-0"
+      } ${reverse ? "md:flex-row-reverse" : ""}`}
     >
-      <div className="h-130 w-340 shadow-2xl hover:cursor-pointer bg-blue-800 relative">
-        <Image
-          src={imgSrc}
-          alt="website-template"
-          className="w-140 pl-5 py-15"
-        />
+      {/* Image with background effect */}
+      <div className="relative w-full max-w-xl">
+        {/* Blue background offset */}
+        <div className="absolute inset-0 translate-x-5 translate-y-5 bg-blue-800 rounded-xl shadow-lg z-0" />
+        {/* Image container */}
+        <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+          <Image
+            src={imgSrc}
+            alt="website-template"
+            className="object-cover w-full h-auto"
+          />
+        </div>
       </div>
-      <div className="ml-[-2em] flex flex-col w-full h-full">
-        <h2 className="font-bold text-6xl pb-2">{title}</h2>
-        <p className="mt-1.5 w-70 h-70 font-bold text-2xl">{description}</p>
+
+      {/* Text Section */}
+      <div className="flex flex-col justify-center max-w-xl text-left md:text-left z-10">
+        <h2 className="font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-4">
+          {title}
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-300 mb-6">
+          {description}
+        </p>
+        <div>{/* <ButtonRound ="View Project" /> */}</div>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 "use client";
 
-import { FaArrowDown } from "react-icons/fa6";
 import ButtonRound from "../components/buttonRound";
 import Typewriter from "../components/Typewriter";
-import Skills from "../components/skills";
+import { FaEnvelope, FaFile } from "react-icons/fa6";
 
 export default function Title() {
   return (
@@ -28,13 +27,18 @@ export default function Title() {
             I&apos;m a full stack software developer&apos; focusing on building
             creative and functional websites.
           </p>
-          <ButtonRound>
-            View My Work{" "}
-            <FaArrowDown className="inline ml-1 mb-1 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
-          </ButtonRound>
+          <div className="flex gap-x-5">
+            <ButtonRound bgColor="bg-red-600" textColor="text-white">
+              Resume <FaFile className="pl-1.5 mt-1" />
+            </ButtonRound>
+            <ButtonRound bgColor="bg-white" textColor="text-black">
+              Contact
+              <FaEnvelope className="pl-1.5 mt-0.5 text-2xl" />
+            </ButtonRound>
+          </div>
         </div>
-        <Skills />
       </div>
+      <div id="aboutSection" />
     </div>
   );
 }
