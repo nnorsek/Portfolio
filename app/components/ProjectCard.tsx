@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { useIsVisible } from "../functions/useIsVisible";
 import imgSrc from "../../public/images/image_website_template.png";
-import ButtonRound from "./buttonRound";
+import Button from "./button";
 
 interface ProjectCardProps {
   reverse?: boolean;
@@ -46,14 +46,20 @@ export default function ProjectCard({
       </div>
 
       {/* Text Section */}
-      <div className="flex flex-col justify-center max-w-xl text-left md:text-left z-10">
+      <div
+        className={`flex flex-col justify-center max-w-xl ${
+          reverse ? "justify-items-end" : "text-left"
+        } md:text-left z-10`}
+      >
         <h2 className="font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-4">
           {title}
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-300 mb-6">
           {description}
         </p>
-        <div>{/* <ButtonRound ="View Project" /> */}</div>
+        <div>
+          <Button text="View Project" href="https://github.com/nnorsek" />
+        </div>
       </div>
     </div>
   );

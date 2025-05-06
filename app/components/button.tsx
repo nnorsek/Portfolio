@@ -1,14 +1,17 @@
-import { FaArrowRightLong } from "react-icons/fa6";
-
 interface ButtonProps {
   text: string;
+  href: string;
 }
 
-export default function Button({ text }: ButtonProps) {
+export default function Button({ text, href }: ButtonProps) {
   return (
-    <button className="group flex flex-row items-center text-left pl-4 pb-1 w-50 border-purple-500 text-2xl font-bold transition duration-300 border-b-2 hover:border-purple-600 hover:bg-purple-600 hover:cursor-pointer">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex w-60 shadow shadow-2xl/45 text-blue-300 bg-gray-800 transition duration-300 ease-in-out hover:scale-110 rounded-sm text-xl px-10 py-2.5 mb-2`}
+    >
       {text}
-      <FaArrowRightLong className="ml-2 mt-1 text-2xl transform opacity-0 -translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
-    </button>
+    </a>
   );
 }

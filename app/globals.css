@@ -55,10 +55,63 @@
     }
   }
 }
+@keyframes waveMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+}
+
+.animated-wave {
+  animation: waveMove 10s ease-in-out infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+.delay-2000 {
+  animation-delay: 2s;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-wave {
+  animation: waveMove 12s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+}
+@keyframes waveFloat {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-100px) translateY(10px);
+  }
+}
+
+.animated-wave {
+  animation: waveFloat 12s ease-in-out infinite;
+}
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
   --primary: #6120e3;
   --button-background: "./images/northern_light.jpeg";
 }
@@ -71,10 +124,11 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: transparent; /* allow underlying background to show */
+  color: var(--foreground, #ededed);
   font-family: font-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
