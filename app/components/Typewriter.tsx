@@ -48,7 +48,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
       <span className="invisible absolute pointer-events-none">
         {words.reduce((a, b) => (a.length > b.length ? a : b))}
       </span>
-      <span className="text-emerald-500 font-bold relative z-10">{text}</span>
+      <span className="text-green-500 font-bold relative z-10">{text}</span>
       <span className="w-[2px] h-[0.8em] font-bold bg-white animate-blink relative z-10" />
     </span>
   );
