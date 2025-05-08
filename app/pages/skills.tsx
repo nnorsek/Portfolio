@@ -62,10 +62,18 @@ const Skills = () => {
         </h2>
         <p className="text-base sm:text-lg md:text-xl leading-relaxed indent-10 text-white/80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua...
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua
         </p>
         <p className="text-base sm:text-lg md:text-xl leading-relaxed indent-10 text-white/80 mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet
         </p>
       </div>
     </section>

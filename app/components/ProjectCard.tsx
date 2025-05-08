@@ -73,7 +73,6 @@ export default function ProjectCard({
             </span>
           ))}
         </div>
-
         {/* Button */}
         <Button text={text} href={href} />
       </div>

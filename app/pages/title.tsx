@@ -34,7 +34,7 @@ export default function Title() {
               bgColor="bg-red-600"
               textColor="text-white"
               href="../images/diploma.pdf"
-              download={"Nicholas-Norsek-Resume.pdf"}
+              download="Nicholas-Norsek-Resume.pdf"
             >
               Resume <FaFile className="pl-1.5 mt-1" />
             </ButtonRound>

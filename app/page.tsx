@@ -3,6 +3,7 @@ import Skills from "./pages/skills";
 import Title from "./pages/title";
 import ProjectCard from "./components/ProjectCard";
 import WavyBackground from "./components/wavyBackground";
+import Experience from "./pages/experience";
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
         <Title />
         <hr className="w-full max-w-6xl mx-auto border-t border-gray-700 my-10" />
         <Skills />
+        <hr className="w-full max-w-6xl mx-auto border-t border-gray-700 my-10" />
+        <Experience />
         <hr className="w-full max-w-6xl mx-auto border-t border-gray-700 my-10" />
         <div className="p-10" id="projectSection">
           <ProjectCard
