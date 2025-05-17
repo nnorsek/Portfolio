@@ -33,8 +33,9 @@ export default function Title() {
             <ButtonRound
               bgColor="bg-red-600"
               textColor="text-white"
-              href="../images/diploma.pdf"
+              href="/images/diploma.pdf"
               download="Nicholas-Norsek-Resume.pdf"
+              openAndDownload={true}
             >
               Resume <FaFile className="pl-1.5 mt-1" />
             </ButtonRound>
@@ -42,7 +43,7 @@ export default function Title() {
               bgColor="bg-white"
               textColor="text-black"
               href="mailto:nicknorsek01@gmail.com"
-              download={null}
+              download={undefined}
             >
               Contact
               <FaEnvelope className="pl-1.5 mt-0.5 text-2xl" />

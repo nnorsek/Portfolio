@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import javascript from "../../public/images/javascript.png";
 import react from "../../public/images/react.png";
 import git from "../../public/images/git.png";
